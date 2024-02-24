@@ -7,11 +7,7 @@ const cryptr = new Cryptr("THisIsTHeSecRetKeY");
 const cron = require("node-cron");
 const moment = require("moment-timezone"); // not the moment npm
 
-// test ServerKey: "AAAA0s9-x5Y:APA91bGs4iH7gEg4KrB22D60-BvKM7MNsgdCCfkzVk8LxLMHYQuOQXJJfMaF3lPQSngPv90GWY8i4feIM6ruLvBTTCHsThky5letLHKPV29qBzp-_FoXpBKhVKOzZwqnDQZkdaEaNFcT";
-// test reciverKey(to): "eETLqIzS8kpGuLyNfeejK2:APA91bEn1XWVUjOpQix1rxoJTdWUO_cX2-gxc_ATIwuNIy1cvCcDBS0LtyxXf-MP5oe5uxyuMMkj8dJMj0FZI6slu9kMi_H4-ML-6BVS4yYfvm7YPH_2K3_HI4PMFF-nBBP0GyDLfGZE",
-
-const serverKey =
-  "AAAAKAy5xzI:APA91bFNbBz1jec7ZZHv8xroEV3IT7dwQ5-30TLEHJCKQcFXMFvCgIJTOxfqqSFo4gL6-txraLklRkTFAO1d226DopKz51u0H_iFOZBE05CcdAhe9S1L14yfq36iwPcZpvR_OdiEM9j0";
+const serverKey = " Add server Keys "; // add your fcm server key 
 const fcm = new FCM(serverKey);
 let message = {};
 
@@ -125,7 +121,7 @@ const send_friend_req = async (payload) => {
     };
     let reciver = findreciver(set_data.reciver_id).deviceToken;
     message = {
-      to: "eETLqIzS8kpGuLyNfeejK2:APA91bEn1XWVUjOpQix1rxoJTdWUO_cX2-gxc_ATIwuNIy1cvCcDBS0LtyxXf-MP5oe5uxyuMMkj8dJMj0FZI6slu9kMi_H4-ML-6BVS4yYfvm7YPH_2K3_HI4PMFF-nBBP0GyDLfGZE",
+      to: reciver,
       notification: {
         title: set_data.title,
         body: set_data.message,
