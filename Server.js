@@ -25,5 +25,4 @@ app.listen(6000, () => {
   console.log("Listening on port:", 6000);
 });
 
-// APP  Strecture:
-// https://stackgeeks.invisionapp.com/console/share/PZAHFCW3UVT/980282217/play
+
